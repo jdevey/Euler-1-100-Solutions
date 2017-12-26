@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/devey/CLionProjects/ProjectEuler/Problem_4/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+utility
+-
+

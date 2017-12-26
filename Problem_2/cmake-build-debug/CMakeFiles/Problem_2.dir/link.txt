@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Problem_2.dir/main.cpp.o  -o Problem_2.exe -Wl,--out-implib,libProblem_2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
