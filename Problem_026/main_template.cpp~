@@ -2,24 +2,20 @@
 
 #include <iostream>
 #include <fstream>
-#include <algorithm>
 #include <vector>
 #include <cmath>
 #include <cstring>
 
-#define BIG 1000000007
 #define fl(x,n) for(int (x) = 0; (x) < (n); ++(x))
-
-#ifndef ONLINE_JUDGE
-	#define cin fin
-	std::ifstream fin("zin.txt");
-#endif
 
 using namespace std;
 
 typedef long long ll;
+typedef vector <vector <int>> vvi;
 
 int main() {
+
+    ios_base::sync_with_stdio(false);
 
     ifstream finz("zin.txt");
 	
