@@ -1,3 +1,5 @@
 #Project Euler specific
-.idea
+*.idea
 CMakeLists.txt
+*.exe
+*.exe.stackdump
