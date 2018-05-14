@@ -3,3 +3,4 @@
 CMakeLists.txt
 *.exe
 *.exe.stackdump
+*~
