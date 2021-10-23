@@ -1,4 +1,4 @@
-#Project Euler specific
+#Project-Euler-specific
 *.idea
 CMakeLists.txt
 *.exe
