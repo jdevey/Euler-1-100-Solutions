@@ -1,0 +1,46 @@
+5x6, 6 x 3
+l1 = sqrt(5^2 + n^2)
+l2 = sqrt((6 - n)^2 + 3^2)
+d = sqrt(5^2 + n^2) + sqrt((6 - n)^2 + 3^2)
+d' = 1/2 * (25 + n^2) ^ (-1/2) * (2n) + 1/2 * (n^2 - 12n + 36 + 9) ^ (-1/2) * (-12 + 2n)
+= 2n/(2 * sqrt(25 + n^2)) + (-12 + 2n) / (2 * sqrt(n^2 - 12n + 36 + 9))
+
+l1 = sqrt(a^2 + n^2)
+l2 = sqrt((b - n)^2 + c^2)
+d = sqrt(a^2 + n^2) + sqrt((b - n)^2 + c^2)
+d' = 1/2 * (a^2 + n^2) ^ (-1/2) * (2n) + 1/2 * (n^2 - 2 * b * n + b^2 + c^2) ^ (-1/2) * (-2 * b + 2n)
+= 2n/(2 * sqrt(a^2 + n^2)) + (-2b + 2n) / (2 * sqrt(n^2 - 2bn + b^2 + c^2))
+= n/sqrt(a^2 + n^2) + (n - b) / sqrt((b - n)^2 + c^2)
+
+solve:
+n/sqrt(a^2 + n^2) = (b - n) / sqrt((b - n)^2 + c^2)
+n * sqrt((b - n)^2 + c^2) = (b - n) * sqrt(a^2 + n^2)
+n^2 * ((b - n)^2 + c^2) = (b - n)^2 * (a^2 + n^2) (square both sides)
+n^2 * (b^2 - 2bn + n^2 + c^2) = (b^2 - 2bn + n^2) * (a^2 + n^2) (expand)
+b^2n^2 - 2bn^3 + n^4 + c^2n^2 = a^2b^2 - 2ba^2n + a^2n^2 + b^2n^2 - 2bn^3 + n^4 (expand)
+c^2n^2 = a^2b^2 - 2ba^2n + a^2n^2 (cancel)
+(a^2-c^2)n^2 - 2ba^2n + a^2b^2 = 0
+
+quadratic:
+n = (2a^2b +- sqrt(4a^4b^2 - 4 * (a^2-c^2) * a^2b^2)) / 2(a^2-c^2)
+= (2a^2b +- sqrt(4a^4b^2 - 4a^4b^2 + 4a^2b^2c^2)) / 2(a^2-c^2)
+= (2a^2b +- sqrt(4a^2b^2c^2)) / 2(a^2-c^2)
+= (2a^2b +- 2abc) / 2(a^2-c^2)
+
+for +:
+= (2a^2b + 2abc) / 2(a^2-c^2)
+= 2ab(a + c) / 2(a^2-c^2)
+= 2ab(a + c) / 2(a - c)(a + c)
+= 2ab / 2(a - c)
+= ab / (a - c)
+
+for -:
+= (2a^2b - 2abc) / 2(a^2-c^2)
+= 2ab(a - c) / 2(a^2-c^2)
+= 2ab(a + c) / 2(a - c)(a + c)
+= 2ab / 2(a + c)
+= ab / (a + c)
+
+def cuboid_route_length(a, b, c):
+	p = ab / (a - c)
+	return sqrt(a^2 + p^2) + sqrt(c^2 + (b - p)^2)
